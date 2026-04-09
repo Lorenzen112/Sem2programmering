@@ -1,6 +1,6 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f9;
+  background-color: #cdc7a2;
   color: #333;
   display: flex;
   justify-content: center;
@@ -19,7 +19,7 @@ body {
   text-align: center;
 }
 #app-container h1 {
-  color: #003366;
+  color: #3e8444;
   margin-top: 0;
 }
 #app-container p {
@@ -33,7 +33,7 @@ body {
   gap: 1rem;
 }
 #app-container .btn-container button {
-  background-color: #003366;
+  background-color: #3e8444;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -43,7 +43,7 @@ body {
   transition: background-color 0.3s ease;
 }
 #app-container .btn-container button:hover {
-  background-color: #00509e;
+  background-color: rgba(62, 132, 68, 0.8);
 }
 
 @media (min-width: 768px) {

@@ -2,31 +2,41 @@
 const scenes = [
     {
         id: 1,
-        title: "Indbakke: Vigtig besked!",
-        text: "Du sidder på biblioteket og tjekker din studie-mail. Du har modtaget en mail fra 'IBA IT-Support'. Der står: 'Din adgang til Canvas lukkes om 2 timer, hvis du ikke opdaterer dit password via dette link.'. Hvad gør du?",
+        title: "Indbakke: Deadline for aflevering nærmer sig!",
+        text: "Du sidder på biblioteket og tjekker din studie-mail. Du har modtaget en mail fra 'Wiseflow'. Der står: 'Din deadline nærmer sig! Wiseflow lukker for afleveringer om 1 time, tryk her for at gå til wiseflow'. Hvad gør du?",
         choices: [
-            { text: "Klik på linket med det samme", nextId: 2 },
+            { text: "Klik på linket", nextId: 2 },
             { text: "Undersøg mailen nærmere", nextId: 3 }
         ]
     },
     {
         id: 2,
-        title: "Falsk Login",
-        text: "Du klikker på linket. Siden ligner Canvas fuldstændig, men hvis du kigger på URL'en står der 'www.iba-update.ru'. Du har allerede tastet dit password ind.",
+        title: "åh nej! (Dårlig beslutning)",
+        text: "Du klikker på linket. Siden ligner Wiseflow fuldstændig, men hvis du kigger på URL'en står der 'www.wiseflow.indianscammer.com'. Du har allerede tastet dit password ind.",
         choices: [
-            { text: "Tryk 'Log ind'", nextId: 4 }
+            { text: "Tryk 'Log ind'", nextId: 5 },
+            { text: "Luk siden og skift password", nextId: 4 }
         ]
     },
     {
         id: 3,
         title: "Sikker adfærd",
-        text: "Godt tænkt! Du holder musen over linket uden at klikke (hover) og ser, at linket fører til en ukendt russisk server. Det er et klassisk phishing-forsøg.",
+        text: "Godt tænkt! Du holder musen over linket uden at klikke (hover) og ser, at linket fører til en ukendt indisk server. Det er et klassisk phishing-forsøg.",
         choices: [
-            { text: "Slet mailen og advar IT", nextId: 5 }
+            { text: "Slet mailen og advar IT", nextId: 7 },
+            { text: "Klik på linket", nextId: 6 }
         ]
     },
     {
         id: 4,
+        title: "Succes! (God slutning)",
+        text: "Du lukker siden og skifter dit password. Det er en god beslutning, da du har undgået at blive hacket. Husk altid at være kritisk over for links i mails, især når de haster!",
+        choices: [
+            { text: "Prøv igen", nextId: 1 }
+        ]
+    },
+    {
+        id: 5,
         title: "Hacket! (Dårlig slutning)",
         text: "Dine oplysninger er nu stjålet! Hackerne har adgang til dine afleveringer, personlige data og kan sende spam fra din konto. Husk altid at tjekke URL'en før du logger ind!",
         choices: [
@@ -34,7 +44,15 @@ const scenes = [
         ]
     },
     {
-        id: 5,
+        id: 6,
+        title: "Du sover i timen! (Dårlig slutning)",
+        text: "Du kan tydeligt se, at siden ikke er Wiseflow, men du klikker alligevel. Du er da vidst helt væk! Nu er du hacket og har givet dine oplysninger til cyberkriminelle. Husk altid at være kritisk og tjekke links, før du klikker!",
+        choices: [
+            { text: "Prøv igen", nextId: 1 }
+        ]
+    },
+    {
+        id: 7,
         title: "Succes! (God slutning)",
         text: "Du undgik fælden! Ved at være kritisk og tjekke links, beskytter du både dine egne og skolens data mod cyberkriminelle.",
         choices: [
