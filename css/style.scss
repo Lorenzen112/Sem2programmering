@@ -1,4 +1,4 @@
-// Variabler til farver og spacing
+// Variabler til farver og spacing //
 $primary-color: #3e8444;
 $bg-color: #cdc7a2;
 $text-color: #333;
@@ -16,6 +16,8 @@ body {
     margin: 0;
 }
 
+
+// Nesting //
 #app-container {
     background: white;
     padding: 2.5rem;
@@ -25,7 +27,6 @@ body {
     max-width: 600px;
     text-align: center;
 
-    // Nesting for overskuelighed
     h1 {
         color: $primary-color;
         margin-top: 0;
@@ -59,7 +60,7 @@ body {
     }
 }
 
-// Responsivt design med media queries
+// media queries for responsivitet //
 @media (min-width: 768px) {
     #app-container {
         .btn-container {
