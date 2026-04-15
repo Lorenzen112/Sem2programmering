@@ -1,4 +1,4 @@
-// Data struktur: Et array af objekter, der repræsenterer hver scene i spillet
+// Data struktur: Et array af objekter, der repræsenterer hver scene i spillet //
 const scenes = [
     {
         id: 1,
@@ -37,7 +37,7 @@ const scenes = [
     },
     {
         id: 5,
-        title: "Hacket! (Dårlig slutning)",
+        title: "HACKET!!! (Dårlig slutning)",
         text: "Dine oplysninger er nu stjålet! Hackerne har adgang til dine afleveringer, personlige data og kan sende spam fra din konto. Husk altid at tjekke URL'en før du logger ind!",
         choices: [
             { text: "Prøv igen", nextId: 1 }
@@ -61,24 +61,24 @@ const scenes = [
     }
 ];
 
-// Variabel til at gribe fat i HTML-containeren via DOM-manipulation
+// Variabel til at gribe fat i HTML-containeren via DOM-manipulation //
 const appContainer = document.getElementById('app-container');
 
-// Funktion til at bygge og vise en scene dynamisk
+// Funktion til at bygge og vise en scene dynamisk //
 function renderScene(sceneId) {
-    // Betinget logik: Find den korrekte scene i vores array
+    // Betinget logik: Find den korrekte scene i vores array //
     const scene = scenes.find(s => s.id === sceneId);
 
-    // Fejlhåndtering, hvis scenen ikke findes
+    // Fejlhåndtering, hvis scenen ikke findes //
     if (!scene) {
         console.error("Scenen findes ikke!");
         return;
     }
 
-    // Ryd HTML-containeren for det gamle indhold
+    // Ryd HTML-containeren for det gamle indhold //
     appContainer.innerHTML = '';
 
-    // Opret HTML elementer
+    // Opret HTML elementer //
     const titleElement = document.createElement('h1');
     titleElement.textContent = scene.title;
 
@@ -88,25 +88,25 @@ function renderScene(sceneId) {
     const btnContainer = document.createElement('div');
     btnContainer.className = 'btn-container';
 
-    // Gennemgå valgmuligheder og opret en knap for hver
+    // Gennemgå valgmuligheder og opret en knap for hver //
     scene.choices.forEach(choice => {
         const button = document.createElement('button');
         button.textContent = choice.text;
 
-        // Event listener, der lytter efter klik og går til den næste scene
+        // Event listener, der lytter efter klik og går til den næste scene baseret på valget //
         button.addEventListener('click', () => {
             renderScene(choice.nextId);
         });
 
-        // Tilføj knappen til knap-containeren
+        // Tilføj knappen til knap-containeren i DOM'en //
         btnContainer.appendChild(button);
     });
 
-    // Tilføj alle de nye elementer til DOM'en
+    // Tilføj alle de nye elementer til DOM'en //
     appContainer.appendChild(titleElement);
     appContainer.appendChild(textElement);
     appContainer.appendChild(btnContainer);
 }
 
-// Start scenariet ved at kalde funktionen med ID 1
+// Start scenariet ved at kalde funktionen med ID 1 //
 renderScene(1);
