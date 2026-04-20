@@ -45,10 +45,11 @@ const scenes = [
     },
     {
         id: 6,
-        title: "Du sover i timen! (Dårlig slutning)",
-        text: "Du kan tydeligt se, at siden ikke er Wiseflow, men du klikker alligevel. Du er da vidst helt væk! Nu er du hacket og har givet dine oplysninger til cyberkriminelle. Husk altid at være kritisk og tjekke links, før du klikker!",
+        title: "Du sover i timen! (Dårlig beslutning)",
+        text: "Du kan tydeligt se, at siden ikke er Wiseflow, men du klikker alligevel. Du har stadig en chance til at tage en bedre beslutning. Husk altid at være kritisk og tjekke links, før du klikker!",
         choices: [
-            { text: "Prøv igen", nextId: 1 }
+            { text: "Skriv oplysninger og tryk 'Log ind'", nextId: 5 },
+            { text: "Luk siden og skift password", nextId: 4 }
         ]
     },
     {
